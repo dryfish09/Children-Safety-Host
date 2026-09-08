@@ -1,0 +1,59 @@
+name: Check & Clean Dead Hosts
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Chạy mỗi Chủ Nhật lúc 00:00
+  workflow_dispatch:      # Cho phép chạy thủ công
+
+jobs:
+  check-hosts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Cho phép commit thay đổi
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        
+      - name: Kiểm tra host còn sống hay chết
+        run: |
+          # Đọc file host, lọc lấy domain
+          grep -E '^0\.0\.0\.0 ' host.txt | awk '{print $2}' > domains.txt
+          
+          # Kiểm tra từng domain
+          echo "🔍 Đang kiểm tra $(wc -l < host.txt) domains..."
+          > dead_hosts.txt
+          > alive_hosts.txt
+          
+          while read domain; do
+            # Ping 1 lần, timeout 3s
+            if ping -c 1 -W 3 "$domain" > /dev/null 2>&1; then
+              echo "✅ $domain" >> alive_hosts.txt
+            else
+              echo "❌ $domain" >> dead_hosts.txt
+            fi
+          done < domains.txt
+          
+          # Thông báo kết quả
+          echo "=== KẾT QUẢ ==="
+          echo "✅ Alive: $(wc -l < alive_hosts.txt)"
+          echo "❌ Dead: $(wc -l < dead_hosts.txt)"
+          
+          # Nếu có host chết, tạo file mới
+          if [ -s dead_hosts.txt ]; then
+            echo "🗑️ Các domain chết sẽ bị xóa:"
+            cat dead_hosts.txt
+            
+            # Tạo host mới chỉ giữ domain còn sống
+            grep -Fv -f <(awk '{print $1}' dead_hosts.txt) ChildrenSafety_Host.txt > ChildrenSafety_Host_clean.txt
+            mv ChildrenSafety_Host_clean.txt ChildrenSafety_Host.txt
+          fi
+          
+      - name: Commit thay đổi nếu có
+        if: always()
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add ChildrenSafety_Host.txt
+          git diff --staged --quiet || git commit -m "🤖 Tự động xóa domain chết $(date +'%Y-%m-%d')"
+          git push
