@@ -9,7 +9,7 @@ this is a **simple, lightweight** host for [AdAway](https://github.com/AdAway/Ad
 - Click into "hosts list" (or sources/host source)
 - Copy this link:
 ```text
-todo: add link
+https://raw.githubusercontent.com/dryfish09/Children-Safety-Host/refs/heads/main/host/hosts
 ```
 - Click "Apply"
 ### Roadmap:
