@@ -38,7 +38,7 @@ fe80::1%lo0 localhost
 # block redtube (.br domain)
 0.0.0.0 redtube.com.br
 0.0.0.0 www.redtube.com
-0.0.0.0 www.redtube.com
+0.0.0.0 redtube.com
 0.0.0.0 bangbros.com
 0.0.0.0 xnxx.com
 0.0.0.0 www.fullhd.to
