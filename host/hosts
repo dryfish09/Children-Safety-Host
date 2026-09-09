@@ -30,20 +30,19 @@ fe80::1%lo0 localhost
 
 
 # Porn domains
-
 # block onlyfans, it's an adult web
 0.0.0.0 onlyfans.com
 0.0.0.0 www.onlyfans.com
-
-# block its cdn/api
-0.0.0.0 onlyfans-images.com
-0.0.0.0 onlyfans-video.com
-0.0.0.0 api.onlyfans.com
-0.0.0.0 cdn.onlyfans.com
-0.0.0.0 cdn02.onlyfans.com
-0.0.0.0 media.onlyfans.com
-
-0.0.0.0 onlyfans.
+# block pornhub (www) domain
+0.0.0.0 www.pornhub.com
+# block redtube (.br domain)
+0.0.0.0 redtube.com.br
+0.0.0.0 www.redtube.com
+0.0.0.0 www.redtube.com
+0.0.0.0 bangbros.com
+0.0.0.0 xnxx.com
+0.0.0.0 www.fullhd.to
+0.0.0.0 fullhd.to
 0.0.0.0 heovl.name
 0.0.0.0 0.xd-cdn.com
 0.0.0.0 0.xxx-cdn.com
