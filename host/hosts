@@ -1,5 +1,5 @@
 # =================== ENGLISH DESCRIPTION ===================
-# Name Children Safety hosts
+# Name: Children Safety hosts
 # GitHub: https://github.com/dryfish09/Children-Safety-Host
 # For app: AdAway (https://github.com/AdAway/AdAway)
 # Report bugs/requesting add new domains: https://github.com/dryfish09/Children-Safety-Host/issues
@@ -41,7 +41,6 @@ fe80::1%lo0 localhost
 0.0.0.0 obus-sg.dc.heytapmobile.com
 0.0.0.0 mediation-sg2-log.pangle.io
 0.0.0.0 mediation-sg2-log.pangle.io
-0.0.0.0 
 0.0.0.0 cdn.appround.biz
 0.0.0.0 cdn.download.sweetpacks.com
 0.0.0.0 cdn.insta.playbryte.com
