@@ -37,7 +37,11 @@ fe80::1%lo0 localhost
 0.0.0.0 beacons5.gvt3.com
 0.0.0.0 adx-op-sg.heytapmobile.com
 0.0.0.0 mon-boot.tiktokv.com
-
+0.0.0.0 cloudconf-app-vn.heytapmobile.com
+0.0.0.0 obus-sg.dc.heytapmobile.com
+0.0.0.0 mediation-sg2-log.pangle.io
+0.0.0.0 mediation-sg2-log.pangle.io
+0.0.0.0 
 0.0.0.0 cdn.appround.biz
 0.0.0.0 cdn.download.sweetpacks.com
 0.0.0.0 cdn.insta.playbryte.com
@@ -47,7 +51,7 @@ fe80::1%lo0 localhost
 0.0.0.0 installer.betterinstaller.com
 0.0.0.0 nsis.bisrv.com
 0.0.0.0 tracking.opencandy.com.s3.amazonaws.com
-
+0.0.0.0 pool.ntp.org
 0.0.0.0 0following.com
 0.0.0.0	123.ywxww.net
 0.0.0.0	1717.1000uc.com
