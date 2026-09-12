@@ -31,6 +31,7 @@ fe80::1%lo0 localhost
 # gore/violent/hates
 0.0.0.0 watchpeopledie.tv
 # etc 
+0.0.0.0 50.230.171.113.in-addr.arpa
 0.0.0.0 dv9cjr-cdn-settings.appsflyersdk.com
 0.0.0.0 ad-host-backup-asia.oss-ap-southeast-1.aliyuncs.com
 0.0.0.0 dv9cjr-cdn-settings.appsflyersdk.com
