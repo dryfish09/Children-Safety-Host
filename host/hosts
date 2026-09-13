@@ -1745,6 +1745,8 @@ fe80::1%lo0 localhost
 # Porn domains
 # block onlyfans, it's an adult web
 0.0.0.0 onlyfans.com
+0.0.0.0 transfixed.com
+0.0.0.0 www.transfixed.com
 0.0.0.0 www.onlyfans.com
 # block pornhub (www) domain
 0.0.0.0 www.pornhub.com
